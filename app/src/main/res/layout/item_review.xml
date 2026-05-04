@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="16dp"
+    android:layout_marginVertical="8dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="2dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:id="@+id/llHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/tvReviewUserName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="홍길동"
+                android:textStyle="bold"
+                android:textColor="@color/text_primary" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/tvReviewDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="2024-02-26"
+                android:textSize="12sp"
+                android:textColor="@color/text_secondary" />
+        </LinearLayout>
+
+        <RatingBar
+            android:id="@+id/rbReviewRating"
+            style="?android:attr/ratingBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/llHeader"
+            android:layout_marginTop="4dp"
+            android:numStars="5"
+            android:stepSize="0.1"
+            tools:rating="4.0" />
+
+        <TextView
+            android:id="@+id/tvReviewContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rbReviewRating"
+            android:layout_marginTop="8dp"
+            tools:text="정말 마음에 들어요! 배송도 빠르고 제품도 완벽합니다."
+            android:textColor="@color/text_primary" />
+
+        <!-- 삭제 버튼 추가 -->
+        <ImageButton
+            android:id="@+id/btnDeleteReview"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@id/tvReviewContent"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/ic_logout"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            app:tint="@color/destructive"
+            android:contentDescription="리뷰 삭제"
+            android:visibility="gone"
+            tools:visibility="visible"/>
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

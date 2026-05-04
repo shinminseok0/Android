@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="리뷰 관리"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="24dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="★★★★★ | 정말 좋은 제품입니다."
+        android:padding="16dp"
+        android:background="#FAFAFA"
+        android:layout_marginBottom="12dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="★★★★☆ | 배송이 조금 늦었지만 만족합니다."
+        android:padding="16dp"
+        android:background="#FAFAFA"
+        android:layout_marginBottom="24dp"/>
+
+    <Button
+        android:id="@+id/btnWriteReview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="새 리뷰 작성"/>
+
+</LinearLayout>

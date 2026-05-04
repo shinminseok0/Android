@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_screen"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- 상단 헤더 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/bg_header"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:paddingTop="@dimen/space_32"
+            android:paddingBottom="@dimen/space_32">
+
+            <!-- 아이콘 자리 -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="📱"
+                android:textSize="32sp"
+                android:layout_marginBottom="@dimen/space_12"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TechMall"
+                android:textSize="@dimen/title_size"
+                android:textStyle="bold"
+                android:textColor="@color/text_primary"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="스마트한 쇼핑의 시작"
+                android:textSize="@dimen/subtitle_size"
+                android:textColor="@color/text_secondary"
+                android:layout_marginTop="@dimen/space_8"/>
+
+        </LinearLayout>
+
+        <!-- 로그인 카드 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_card"
+            android:layout_marginStart="@dimen/space_16"
+            android:layout_marginEnd="@dimen/space_16"
+            android:layout_marginTop="@dimen/space_16"
+            android:layout_marginBottom="@dimen/space_24"
+            android:padding="@dimen/space_24"
+            android:orientation="vertical">
+
+            <!-- 로그인 타이틀 -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="로그인"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_primary"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="계정에 로그인하여 쇼핑을 시작하세요"
+                android:textSize="@dimen/label_size"
+                android:textColor="@color/text_secondary"
+                android:layout_marginTop="@dimen/space_8"
+                android:layout_marginBottom="@dimen/space_24"/>
+
+            <!-- 이메일 라벨 -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="이메일"
+                android:textSize="@dimen/label_size"
+                android:textColor="@color/text_primary"/>
+
+            <EditText
+                android:id="@+id/etEmail"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/input_height"
+                android:hint="example@email.com"
+                android:layout_marginTop="@dimen/space_8"
+                android:layout_marginBottom="@dimen/space_16"/>
+
+            <!-- 비밀번호 라벨 -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="비밀번호"
+                android:textSize="@dimen/label_size"
+                android:textColor="@color/text_primary"/>
+
+            <EditText
+                android:id="@+id/etPassword"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/input_height"
+                android:hint="비밀번호를 입력하세요"
+                android:inputType="textPassword"
+                android:layout_marginTop="@dimen/space_8"
+                android:layout_marginBottom="@dimen/space_12"/>
+
+            <!-- 로그인 유지 / 비밀번호 찾기 -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/space_24">
+
+                <CheckBox
+                    android:id="@+id/cbKeepLogin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="로그인 상태 유지"/>
+
+                <TextView
+                    android:id="@+id/tvFindPassword"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="비밀번호 찾기"
+                    android:textColor="@color/primary"
+                    android:layout_alignParentEnd="true"/>
+
+            </RelativeLayout>
+
+            <!-- 로그인 버튼 -->
+            <Button
+                android:id="@+id/btnLogin"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+                android:text="로그인"
+                android:textColor="@color/white"
+                android:background="@drawable/bg_button_primary"
+                android:layout_marginBottom="@dimen/space_12"/>
+
+            <!-- 비회원 둘러보기 버튼 -->
+            <Button
+                android:id="@+id/btnGuest"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+                android:text="비회원으로 둘러보기"
+                android:textColor="@color/primary"
+                android:background="@android:color/transparent"
+                android:layout_marginBottom="@dimen/space_24"/>
+
+            <!-- 구분선 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="@dimen/space_24">
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/line_gray"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" 또는 "
+                    android:textColor="@color/text_secondary"
+                    android:paddingStart="@dimen/space_12"
+                    android:paddingEnd="@dimen/space_12"/>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/line_gray"/>
+
+            </LinearLayout>
+
+            <!-- 소셜 로그인 버튼 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:text="G"
+                    android:background="@drawable/bg_social_google"/>
+
+                <Space
+                    android:layout_width="@dimen/space_12"
+                    android:layout_height="1dp"/>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:text="K"
+                    android:background="@drawable/bg_social_kakao"/>
+
+                <Space
+                    android:layout_width="@dimen/space_12"
+                    android:layout_height="1dp"/>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:text="N"
+                    android:background="@drawable/bg_social_naver"/>
+
+            </LinearLayout>
+
+            <!-- 회원가입 -->
+            <TextView
+                android:id="@+id/tvRegister"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="계정이 없으신가요? 회원가입"
+                android:textColor="@color/primary"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/space_24"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

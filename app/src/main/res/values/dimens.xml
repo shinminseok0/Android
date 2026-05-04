@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 여백 -->
+    <dimen name="space_8">8dp</dimen>
+    <dimen name="space_12">12dp</dimen>
+    <dimen name="space_16">16dp</dimen>
+    <dimen name="space_24">24dp</dimen>
+    <dimen name="space_32">32dp</dimen>
+
+    <!-- 높이 -->
+    <dimen name="input_height">48dp</dimen>
+    <dimen name="button_height">52dp</dimen>
+
+    <!-- 글자 크기 -->
+    <dimen name="title_size">28sp</dimen>
+    <dimen name="subtitle_size">14sp</dimen>
+    <dimen name="label_size">14sp</dimen>
+
+</resources>

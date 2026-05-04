@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@color/bg_screen">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- 1. 상품 이미지 영역 -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="350dp">
+            <ImageView
+                android:id="@+id/ivDetailPhoneImage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_launcher_background" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/bg_gradient_bottom"
+                android:visibility="gone"/>
+
+            <ImageButton
+                android:id="@+id/btnFavorite"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_margin="20dp"
+                android:background="@drawable/bg_circle_white"
+                android:src="@drawable/ic_favorite_border"
+                app:tint="@color/destructive"
+                android:elevation="6dp" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="24dp"
+            android:paddingBottom="40dp"
+            android:background="@drawable/bg_top_rounded_white"
+            android:layout_marginTop="-20dp"
+            android:elevation="4dp">
+
+            <!-- 관리자용 수정/삭제 버튼 -->
+            <LinearLayout
+                android:id="@+id/layoutAdminActions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="24dp"
+                android:visibility="gone"
+                tools:visibility="visible">
+                <Button
+                    android:id="@+id/btnEditPhone"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="상품 수정"
+                    android:layout_marginEnd="8dp"
+                    android:backgroundTint="@color/primary"
+                    android:textColor="@color/white"/>
+                <Button
+                    android:id="@+id/btnDeletePhone"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="상품 삭제"
+                    android:backgroundTint="@color/destructive"
+                    android:textColor="@color/white"/>
+            </LinearLayout>
+
+            <!-- 2. 상품 정보 -->
+            <TextView
+                android:id="@+id/tvDetailPhoneBrand"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="Apple"
+                android:textSize="14sp"
+                android:textColor="@color/primary"
+                android:textStyle="bold"
+                android:layout_marginTop="24dp"/>
+
+            <TextView
+                android:id="@+id/tvDetailPhoneName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="iPhone 15"
+                android:textSize="26sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_primary"
+                android:layout_marginTop="4dp"/>
+
+            <TextView
+                android:id="@+id/tvDetailPhonePrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="1,350,000원"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="@color/primary"
+                android:layout_marginTop="8dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginTop="16dp">
+                <RatingBar
+                    android:id="@+id/rbDetailRating"
+                    style="?android:attr/ratingBarStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:numStars="5"
+                    android:stepSize="0.1"
+                    tools:rating="5.0"
+                    android:progressTint="#FFB300"/>
+                <TextView
+                    android:id="@+id/tvDetailRatingValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="5.0"
+                    android:layout_marginStart="8dp"
+                    android:textStyle="bold"/>
+                <TextView
+                    android:id="@+id/tvDetailReviewCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="(1개의 리뷰)"
+                    android:layout_marginStart="4dp"
+                    android:textColor="@color/text_secondary" />
+            </LinearLayout>
+
+            <!-- 상품 설명 영역 추가 -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="상품 설명"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_primary"
+                android:layout_marginTop="24dp"/>
+
+            <TextView
+                android:id="@+id/tvDetailPhoneDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="이 휴대폰은 최신 기술이 집약된 모델로 최고의 성능을 자랑합니다."
+                android:textSize="15sp"
+                android:textColor="@color/text_secondary"
+                android:layout_marginTop="8dp"
+                android:lineSpacingExtra="4dp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/line_gray"
+                android:layout_marginVertical="24dp" />
+
+            <!-- 수량 조절 UI -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="구매 수량"
+                    android:textSize="17sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/text_primary"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:background="@drawable/bg_quantity_selector"
+                    android:padding="2dp">
+
+                    <ImageButton
+                        android:id="@+id/btnDetailDecrease"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/ic_remove"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:padding="10dp"
+                        app:tint="@color/text_primary" />
+
+                    <TextView
+                        android:id="@+id/tvDetailQuantity"
+                        android:layout_width="44dp"
+                        android:layout_height="wrap_content"
+                        android:text="1"
+                        android:gravity="center"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/text_primary"/>
+
+                    <ImageButton
+                        android:id="@+id/btnDetailIncrease"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/ic_add"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:padding="10dp"
+                        app:tint="@color/text_primary" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnAddToCart"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:text="장바구니 담기"
+                android:layout_marginTop="24dp"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:backgroundTint="@color/primary"
+                android:textColor="@color/white"
+                app:cornerRadius="12dp"/>
+
+            <!-- 3. 댓글 섹션 -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/line_gray"
+                android:layout_marginVertical="32dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="상품 문의 및 댓글"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="16dp"
+                android:textColor="@color/text_primary"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/bg_card_bordered"
+                android:padding="12dp">
+                <EditText
+                    android:id="@+id/etCommentContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="궁금한 점을 남겨주세요."
+                    android:background="@android:color/transparent"
+                    android:padding="8dp"
+                    android:textSize="14sp"
+                    android:minLines="3"
+                    android:gravity="top"/>
+                <Button
+                    android:id="@+id/btnSubmitComment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="등록"
+                    android:layout_gravity="end"
+                    android:backgroundTint="@color/primary"
+                    android:textColor="@color/white"
+                    style="@style/Widget.AppCompat.Button.Small"/>
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvCommentList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false"
+                android:overScrollMode="never"
+                android:layout_marginTop="16dp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:itemCount="1"
+                tools:listitem="@layout/item_comment" />
+
+            <TextView
+                android:id="@+id/tvEmptyComments"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="등록된 댓글이 없습니다."
+                android:gravity="center"
+                android:padding="32dp"
+                android:textColor="@color/text_secondary"
+                android:visibility="gone"/>
+
+            <!-- 4. 리뷰 섹션 -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/line_gray"
+                android:layout_marginVertical="32dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="사용자 평점 및 리뷰"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="16dp"
+                android:textColor="@color/text_primary"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/bg_card_bordered"
+                android:padding="16dp">
+
+                <RatingBar
+                    android:id="@+id/rbInputRating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:numStars="5"
+                    android:stepSize="1.0"
+                    android:rating="5.0"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="12dp"
+                    android:progressTint="#FFB300"/>
+
+                <EditText
+                    android:id="@+id/etReviewContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="사용 후기를 남겨주세요."
+                    android:background="@android:color/transparent"
+                    android:padding="8dp"
+                    android:textSize="14sp"
+                    android:minLines="3"
+                    android:gravity="top"/>
+
+                <Button
+                    android:id="@+id/btnSubmitReview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="리뷰 등록"
+                    android:layout_gravity="end"
+                    android:backgroundTint="@color/primary"
+                    android:textColor="@color/white"
+                    android:layout_marginTop="8dp"/>
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvReviewList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false"
+                android:overScrollMode="never"
+                android:layout_marginTop="16dp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:itemCount="1"
+                tools:listitem="@layout/item_review" />
+
+            <TextView
+                android:id="@+id/tvEmptyReviews"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="등록된 리뷰가 없습니다."
+                android:gravity="center"
+                android:padding="32dp"
+                android:textColor="@color/text_secondary"
+                android:visibility="gone"/>
+
+        </LinearLayout>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

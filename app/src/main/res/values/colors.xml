@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Backgrounds -->
+    <color name="bg_screen">#F5F8FC</color>
+    <color name="bg_header">#EEF4FF</color>
+    <color name="bg_card">#FFFFFF</color>
+
+    <!-- Lines & Dividers -->
+    <color name="line_gray">#E5E7EB</color>
+
+    <!-- Text -->
+    <color name="text_primary">#1F2937</color>
+    <color name="text_secondary">#6B7280</color>
+
+    <!-- Core Colors -->
+    <color name="primary">#2563EB</color>
+    <color name="primary_dark">#1D4ED8</color>
+    <color name="destructive">#DC2626</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+
+    <!-- Social Buttons -->
+    <color name="google_bg">#FFFFFF</color>
+    <color name="kakao_bg">#FEE500</color>
+    <color name="kakao_text">#000000</color>
+    <color name="naver_bg">#03C75A</color>
+    <color name="naver_text">#FFFFFF</color>
+
+</resources>

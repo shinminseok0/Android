@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">shinTech</string>
+
+    <string-array name="sort_options">
+        <item>기본</item>
+        <item>가나다순</item>
+        <item>별점순</item>
+        <item>댓글순</item>
+    </string-array>
+</resources>
