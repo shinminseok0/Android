@@ -14,7 +14,7 @@
 
 ## 🛠️ 기술 스택
 
-* **Language**: Java / Kotlin
+* **Language**: Kotlin
 * **IDE**: Android Studio
 * **UI**: XML Layout
 * **Build Tool**: Gradle
